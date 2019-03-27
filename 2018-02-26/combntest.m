@@ -1,3 +1,7 @@
+% Tammy Chan
+% Bioinformatics
+% February 26th, 2018
+
 clear all; % clear all memory
 close all; % close all windows
 

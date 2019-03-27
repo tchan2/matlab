@@ -1,4 +1,8 @@
 
+% Tammy Chan
+% Bioinformatics
+% Due: 3/16/2018
+
 clear all;
 close all;
 
@@ -8,7 +12,7 @@ sequence = humanHEXA.Sequence;
 % Finding All Potential Forward Primers
 N = length(sequence) % length of the target sequence
 M = 20  % desired primer length
-index = repmat((0:N-M)',1,M)+repmat(1:M,N-M+1,1);
+index = repmat((0:N-M),1,M)+repmat(1:M,N-M+1,1);
 fwdprimerlist = sequence(index);
 
 % Finding All Potential Reverse Primers
@@ -95,7 +99,6 @@ fwdPrimerData(i).primerProp(i).DM = fwdPrimerData(i).primerProp.DM(fwd_dm);
 revPrimerData(i).primerProp(i).DM = revPrimerData(i).primerProp.DM(rev_dm);
 
 
-%{
 % Filtering Primers Based on GC Content
 for i = 1: length(gc_primers)
     if gc_primers == 0
@@ -114,6 +117,7 @@ for i = 1: length((revPrimerData(i).primerProp.GC))
         i = i - 1;
     end
 end
+
 disp (revPrimerData(i).primerProp.GC);
 revPrimerData = revPrimerData(revPrimerData.deleteElement(true));
-%}
+

@@ -1,6 +1,6 @@
 % Tammy Chan
 % Bioinformatics
-% Homework 1 Problem 2 (Central Dogma)
+% Central Dogma
 
 clear all; % clear all memory
 close all; % close all windows
